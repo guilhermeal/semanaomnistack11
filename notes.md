@@ -1,26 +1,47 @@
+## ANOTAÇÕES GERAIS / OmniStack11
 
-# ROTAS / Recursos
+----
+### ROTAS / Recursos
+
+### METODOS HTTP
+
+* GET: Buscar alguma informação do backend
+* POST: Criar uma informação no backend
+* PUT: ALterar informação no backend
+* DELETE: Deletar informação no backend
+
+### TIPOS DE PARAMETROS (pars): 
+
+* QUERY: Parametros nomeados enviados na rota apos o ? (Ex.: ?param=txt&pag=1)
+* ROUTE: Parametros utilizados para identificar recursos (EX.: /users/:id --> /users/1)
+* REQUEST BODY: Corpo da requisição usado para criar/alterar recursos
+
+### BANCO DE DADOS
+
+##### Bancos (SQL) Exemplos: 
+* MySQL
+* sQLite *
+* PostgreeSQL
+* Oracle
+* MS SQL Server
+
+##### Bancos (NoSQL) Exemplos: 
+* MongoDB
+* CouchDB
+* Firebase
+* etc...
 
 
-# METODOS HTTP
+#### DRIVER de Comunicação: Quem vai "falar com o DB"
+###### EXEMPLO (query): 
+    SELECT \* FROM users;
 
- GET: Buscar alguma informação do backend
- POST: Criar uma informação no backedn
- PUT: ALterar informação no backend
- DELETE: Deletar informação no backend
+###### EXEMPLO (Query Builder):
+    table('users').select('*').where().
 
-# TIPOS DE PARAMETROS: 
-
- QUERY: Parametros nomeados enviados na rota apos o ? (Ex.: ?param=txt&pag=1)
- ROUTE: Parametros utilizados para identificar recursos (EX.: /users/:id --> /users/1)
- REQUEST BODY: Corpo da requisição usado para criar/alterar recursos
-
-# BANCO DE DADOS
-
- SQL: MySQL, sQLite, PostgreeSQL, Oracle, MS SQL Server
- NoSQL: MongoDB, CouchDB, etc.
+>  KNEX (QUery builder)
 
 
-# DRIVER : SELECT * FROM users;
- Query Builder: table('users').select('*').where()...
-        KNEX (QUery builder)
+----
+## Changelog (of this Notes)
+* 2020-03-31 Updated after AULA#2
